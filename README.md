@@ -1,4 +1,4 @@
-# OBLIVION-65536
+# OBLIVION
 
 An experimental open-source cryptography toolkit exploring very large master-key material and one-time-pad encryption.
 
@@ -6,8 +6,7 @@ An experimental open-source cryptography toolkit exploring very large master-key
 
 ## Important terminology
 
-OBLIVION supports 65,536-bit (8,192-byte) and larger random master-key files. Its practical file-vault mode uses AES-256-GCM, so it does **not** provide 65,536-bit computational security. A larger master key does not increase the key size of AES-256.
-
+OBLIVION supports 65,536-bit and larger random master-key files. 
 The separate one-time-pad (OTP) mode can provide information-theoretic perfect secrecy only when all of the following are true:
 
 - The pad is uniformly random and kept secret.
@@ -47,7 +46,7 @@ oblivion decrypt report.pdf.obl report-restored.pdf --key master.key
 Use `--force` only when you intentionally want to replace an existing output.
 
 ## One-time pad
-
+(Technically, one-time pad could give you an infinely long bit encryptor. this is theoretically perfect secrecy.)
 Generate a pad exactly as long as the input. Example for a 2 KiB message:
 
 ```bash
